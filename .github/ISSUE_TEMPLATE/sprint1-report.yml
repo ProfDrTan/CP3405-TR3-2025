@@ -1,0 +1,76 @@
+name: "Sprint 1 Report"
+description: "End-of-lab intake for CP3405 — one issue per team"
+title: "[Sprint 1] <TEAM CODE> — <Short summary>"
+labels: ["intake","sprint1-report"]
+body:
+  - type: input
+    id: team
+    attributes: { label: Team code, placeholder: "e.g., P1T3" }
+    validations: { required: true }
+  - type: input
+    id: repo
+    attributes: { label: GitHub repo URL, placeholder: "https://github.com/<org>/<repo>" }
+    validations: { required: true }
+  - type: input
+    id: project
+    attributes: { label: GitHub Project board URL, placeholder: "https://github.com/<org>/<repo>/projects/..." }
+    validations: { required: true }
+  - type: input
+    id: figjam
+    attributes: { label: FigJam Charter URL (viewable by link), placeholder: "https://www.figma.com/file/..." }
+    validations: { required: true }
+  - type: input
+    id: figma
+    attributes: { label: Figma UI file URL (viewable by link), placeholder: "https://www.figma.com/file/..." }
+    validations: { required: true }
+  - type: textarea
+    id: sprint_goal
+    attributes: { label: Sprint 1 Goal (one sentence), placeholder: "By end of Sprint 1, users can ..." }
+    validations: { required: true }
+  - type: input
+    id: pbi_count
+    attributes: { label: PBIs in backlog (count), placeholder: "e.g., 10" }
+    validations: { required: true }
+  - type: textarea
+    id: roles
+    attributes:
+      label: Roles (PO, SM, UX/UI, FE, BE, Data/ML, optional QA/DevOps)
+      placeholder: "PO: Name (@github)\nSM: Name (@github)\nUX/UI: ..."
+    validations: { required: true }
+  - type: dropdown
+    id: repo_state
+    attributes:
+      label: Repo state
+      options: ["Repo + branch protection set", "Repo created (protection pending)"]
+    validations: { required: true }
+  - type: dropdown
+    id: ci_state
+    attributes:
+      label: CI state
+      options: ["Stub configured (planned green run)", "Green run recorded", "Not set"]
+    validations: { required: true }
+  - type: dropdown
+    id: ai_state
+    attributes:
+      label: AI/ML baseline state
+      options: ["Planned + folder/notebook stub", "Baseline coded + metric printed", "Not started"]
+    validations: { required: true }
+  - type: textarea
+    id: prs
+    attributes: { label: PR links (at least one if available), placeholder: "https://github.com/<org>/<repo>/pull/1\nhttps://..." }
+  - type: input
+    id: ci_run
+    attributes: { label: Latest CI run URL (if available), placeholder: "https://github.com/<org>/<repo>/actions/runs/..." }
+  - type: textarea
+    id: blockers
+    attributes: { label: Top 2 blockers, placeholder: "1) ...  2) ..." }
+  - type: textarea
+    id: members
+    attributes: { label: Team member GitHub usernames (comma separated), placeholder: "@alice, @bob, @charlie, ..." }
+    validations: { required: true }
+  - type: markdown
+    attributes:
+      value: |
+        **Submission tip:** set Figma/FigJam links to “Anyone with the link can view.”
+        **After you submit:** paste this issue URL on your FigJam header frame.
+
